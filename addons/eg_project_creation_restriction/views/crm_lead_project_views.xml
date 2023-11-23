@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_crm_lead_form_inherited" model="ir.ui.view">
+        <field name="name">crm.lead.form</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="sheet/group/group//field[@name='tag_ids']" position="after">
+                <field name="construction_type_id"/>
+                <field name="estate"/>
+                <label for="site_street" string="Site Address"/>
+                <div class="o_address_format">
+                    <field name="site_street" placeholder="Street..." class="o_address_street"/>
+                    <field name="site_street2" placeholder="Street 2..." class="o_address_street"/>
+                    <field name="site_city" placeholder="City" class="o_address_city"/>
+                    <field name="site_state_id" class="o_address_state" placeholder="State" options='{"no_open": True}'/>
+                    <field name="site_zip" placeholder="ZIP" class="o_address_zip"/>
+                    <field name="site_country_id" placeholder="Country" class="o_address_country" options='{"no_open": True, "no_create": True}'/>
+                </div>
+            </xpath>
+            <notebook>
+                <page name="documents" string="Documents">
+                    <field name="lead_documents" widget="one2many_list" mode="kanban" options="{'editable': true}">
+                        <kanban edit="false" import="false">
+                            <field name="id"/>
+                            <field name="mimetype"/>
+                            <field name="type"/>
+                            <field name="create_uid"/>
+                            <field name="url"/>
+                            <field name="create_date"/>
+                            <field name="name"/>
+                            <templates>
+                                <t t-name="kanban-box">
+                                    <div class="oe_kanban_global_area oe_kanban_global_click o_kanban_attachment">
+                                        <div class="row">
+                                            <div class="offset-10">
+                                                <div class="o_dropdown_kanban dropdown" groups="base.group_user">
+                                                    <a role="button" class="dropdown-toggle o-no-caret btn" data-bs-toggle="dropdown" href="#" aria-label="Dropdown menu" title="Dropdown menu">
+                                                        <span class="fa fa-ellipsis-v"/>
+                                                    </a>
+                                                    <div class="dropdown-menu" role="menu">
+                                                        <a t-attf-href="/web/content/ir.attachment/#{record.id.raw_value}/datas?download=true" download="" class="dropdown-item">Download</a>
+                                                        <a t-if="widget.deletable" role="menuitem" type="delete" class="dropdown-item">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="o_kanban_image">
+                                            <div class="o_kanban_image_wrapper">
+                                                <t t-set="webimage" t-value="new RegExp('image.*(gif|jpeg|jpg|png)').test(record.mimetype.value)"/>
+                                                <div t-if="record.type.raw_value == 'url'" class="o_url_image fa fa-link fa-3x text-muted" aria-label="Image is a link"/>
+                                                <img t-elif="webimage" t-attf-src="/web/image/#{record.id.raw_value}" width="100" height="100" alt="Document" class="o_attachment_image"/>
+                                                <div t-else="!webimage" class="o_image o_image_thumbnail" t-att-data-mimetype="record.mimetype.value"/>
+                                            </div>
+                                        </div>
+                                        <div class="o_kanban_details">
+                                            <div class="o_kanban_details_wrapper">
+                                                <div t-att-title="record.doc_name.raw_value" class="o_kanban_record_title">
+                                                    <field name="doc_name" class="o_text_overflow"/>
+                                                </div>
+                                                <div t-att-title="record.name.raw_value" class="o_kanban_record_title">
+                                                    <field name="name" class="o_text_overflow"/>
+                                                </div>
+                                                <div class="o_kanban_record_body">
+                                                    <t t-if="record.type.raw_value == 'url'">
+                                                        <span class="o_document_url"><i class="fa fa-globe" aria-label="Document url"/> <field name="url" widget="url"/></span>
+                                                    </t>
+                                                    <samp t-else="" class="text-muted"> </samp>
+                                                </div>
+                                                <div class="o_kanban_record_bottom">
+                                                    <time class="oe_kanban_bottom_left">
+                                                        <field name="create_date" widget="date"/>
+                                                    </time>
+                                                    <div class="oe_kanban_bottom_right">
+                                                        <field name="create_uid" widget="many2one_avatar_user"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </t>
+                            </templates>
+                        </kanban>
+                        <tree>
+                            <field name="doc_name"/>
+                            <field name="db_datas" widget="image" options="{'size': [100, 100]}" class="oe_avatar"/>
+                        </tree>
+                        <form string="Attachments">
+                            <sheet>
+                                <label for="name"/>
+                                <label for="doc_name"/>
+                                <h1>
+                                    <field name="name" invisible="1"/>
+                                    <field name="doc_name"/>
+                                </h1>
+                                <group>
+                                    <group>
+                                        <field name="type" invisible="1"/>
+                                        <field name="datas" string="Document" filename="name" attrs="{'invisible':[('type','=','url')]}"/>
+                                        <field name="url" widget="url" attrs="{'invisible':[('type','=','binary')]}"/>
+                                    </group>
+                                    <group string="Attached To" groups="base.group_no_one" invisible="1">
+                                        <field name="res_name" invisible="1"/>
+                                        <field name="company_id" invisible="1" groups="base.group_multi_company" options="{'no_create': True}"/>
+                                    </group>
+                                    <group string="History" groups="base.group_no_one" attrs="{'invisible':[('create_date','=',False)]}">
+                                        <label for="create_uid" string="Creation"/>
+                                        <div name="creation_div">
+                                            <field name="create_uid" readonly="1" class="oe_inline"/> on
+                                            <field name="create_date" readonly="1" class="oe_inline"/>
+                                        </div>
+                                    </group>
+                                </group>
+                            </sheet>
+                        </form>
+                    </field>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+
+
+    <record id="task_type_edit_inherit" model="ir.ui.view">
+        <field name="name">project.task.type.inherit.form</field>
+        <field name="model">project.task.type</field>
+        <field name="inherit_id" ref="project.task_type_edit"/>
+        <field name="arch" type="xml">
+            <xpath expr="sheet/group/group//field[@name='project_ids']" position="before">
+                <field name="default_stage"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

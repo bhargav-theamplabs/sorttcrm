@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="project.type.template" id="project_type1">
+        <field name="name">Single Storey</field>
+    </record>
+    <record model="project.type.template" id="project_type2">
+        <field name="name">Double Storey</field>
+    </record>
+
+    <record model="project.milestone.template" id="project_milestone_1">
+        <field name="name">Preliminary Stage</field>
+    </record>
+    <record model="project.milestone.template" id="project_milestone_2">
+        <field name="name">Base Stage</field>
+    </record>
+    <record model="project.milestone.template" id="project_milestone_3">
+        <field name="name">Frame Stage</field>
+    </record>
+    <record model="project.milestone.template" id="project_milestone_4">
+        <field name="name">Lockup Stage</field>
+    </record>
+    <record model="project.milestone.template" id="project_milestone_5">
+        <field name="name">Fixing Stage</field>
+    </record>
+    <record model="project.milestone.template" id="project_milestone_6">
+        <field name="name">Completion Stage</field>
+    </record>
+
+  
+
+    <record model="task.template" id="stage_lead1">
+        <field name="name">Building Contract</field>
+        <field name="serial_no">1</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_1'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead2">
+        <field name="name">Building Specifications</field>
+        <field name="serial_no">2</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_1'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead3">
+        <field name="name">Architectural Plan</field>
+        <field name="serial_no">3</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_1'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead4">
+        <field name="name">Developer Approval</field>
+        <field name="serial_no">4</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_1'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead5">
+        <field name="name">Energy Report</field>
+        <field name="serial_no">5</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_1'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead6">
+        <field name="name">Soil and Contour Report</field>
+        <field name="serial_no">6</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_1'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead7">
+        <field name="name">Structural Engineering</field>
+        <field name="serial_no">7</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_1'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead8">
+        <field name="name">PI and LPOD (Legal Point of Discharge)</field>
+        <field name="serial_no">8</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_1'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead9">
+        <field name="name">Check for Bush Fire Location</field>
+        <field name="serial_no">9</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_1'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead10">
+        <field name="name">PIC</field>
+        <field name="serial_no">10</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_1'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead11">
+        <field name="name">Certificate of Compliance (COC) - External Wall Cladding</field>
+        <field name="serial_no">11</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_1'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead12">
+        <field name="name">CIL- (Community Infrastructural Levy)</field>
+        <field name="serial_no">12</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_1'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead13">
+        <field name="name"> Domestic Home Warranty Insurance</field>
+        <field name="serial_no">13</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_1'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead14">
+        <field name="name">Performance Assessment - Recycle Water</field>
+        <field name="serial_no">14</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_1'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead15">
+        <field name="name">Building Permit</field>
+        <field name="serial_no">15</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_1'))]"/>
+    </record>
+
+    <record model="task.template" id="stage_lead16">
+        <field name="name">Assest Protection Permit Application</field>
+        <field name="serial_no">1</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead17">
+        <field name="name">Temporary Fence (check for how many sides)</field>
+        <field name="serial_no">2</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead18">
+        <field name="name">Site signage</field>
+        <field name="serial_no">3</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead19">
+        <field name="name">Crossover (Check with council if required)</field>
+        <field name="serial_no">4</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead20">
+        <field name="name"> Temporary Toilet</field>
+        <field name="serial_no">5</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead21">
+        <field name="name">Site Cut</field>
+        <field name="serial_no">6</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead22">
+        <field name="name">Set outs</field>
+        <field name="serial_no">7</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead23">
+        <field name="name">FFL (Finished Floor Level Pegs)</field>
+        <field name="serial_no">8</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead24">
+        <field name="name">PIC /Drainage</field>
+        <field name="serial_no">9</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead25">
+        <field name="name">Underground Electrical</field>
+        <field name="serial_no">10</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead26">
+        <field name="name">Underground Plumbing</field>
+        <field name="serial_no">11</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead27">
+        <field name="name">Termite Treatment Part A (Check on the Land Information)</field>
+        <field name="serial_no">12</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead28">
+        <field name="name">Base (Crushed Rock)</field>
+        <field name="serial_no">13</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead29">
+        <field name="name">Inspection for Base with the surveyor (Same Day)</field>
+        <field name="serial_no">14</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead30">
+        <field name="name">Inspection for Bored Piers with surveyor (If BP is in the Plan)</field>
+        <field name="serial_no">15</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead31">
+        <field name="name">Steel Delivery on Base day</field>
+        <field name="serial_no">16</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead32">
+        <field name="name">Waffle Pods Delivery on Base Day</field>
+        <field name="serial_no">17</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead33">
+        <field name="name">U/G Plumbing Camera inspection (Morning)</field>
+        <field name="serial_no">18</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead34">
+        <field name="name">Steel Boxing</field>
+        <field name="serial_no">19</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead35">
+        <field name="name">Book Steel Inspection with Surveyor (Afternoon)</field>
+        <field name="serial_no">20</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead36">
+        <field name="name">Book Concrete Delivery (Same Day of the Concrete pour Morning)</field>
+        <field name="serial_no">21</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead37">
+        <field name="name">Concrete Pour</field>
+        <field name="serial_no">22</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead38">
+        <field name="name">Pick up of Extra Waffle Pods (if any)</field>
+        <field name="serial_no">23</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead39">
+        <field name="name">Back Fill and Site Clean</field>
+        <field name="serial_no">24</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead40">
+        <field name="name">Send Invoice to the Owner of the Property</field>
+        <field name="serial_no">25</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_2'))]"/>
+    </record>
+
+    <record model="task.template" id="stage_lead41">
+        <field name="name">Ground Floor Timber - Delivery</field>
+        <field name="serial_no">1</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_3'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead42">
+        <field name="name">Ground Floor Timber - Install</field>
+        <field name="serial_no">2</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_3'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead43">
+        <field name="name">Possies - Delivery</field>
+        <field name="serial_no">3</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_3'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead44">
+        <field name="name">Possies - Install</field>
+        <field name="serial_no">4</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_3'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead45">
+        <field name="name">Yellow Tongue - Delivery</field>
+        <field name="serial_no">5</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_3'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead46">
+        <field name="name">Yellow Tongue - Install</field>
+        <field name="serial_no">6</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_3'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead47">
+        <field name="name">First Floor Timber Delivery</field>
+        <field name="serial_no">7</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_3'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead48">
+        <field name="name">First Floor Timber Instal</field>
+        <field name="serial_no">8</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_3'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead49">
+        <field name="name">Trusses - Delivery (GF)</field>
+        <field name="serial_no">9</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_3'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead50">
+        <field name="name">Trusses - Instal (GF)</field>
+        <field name="serial_no">10</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_3'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead51">
+        <field name="name">Windows - Delivery</field>
+        <field name="serial_no">11</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_3'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead52">
+        <field name="name">FRAMES - Inspection Internal</field>
+        <field name="serial_no">12</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_3'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead53">
+        <field name="name">Frame Mandatory Inspection</field>
+        <field name="serial_no">13</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_3'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead54">
+        <field name="name">Frame Stage Invoice</field>
+        <field name="serial_no">14</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_3'))]"/>
+    </record>
+
+    
+    <record model="task.template" id="stage_lead55">
+        <field name="name">Window delivery</field>
+        <field name="serial_no">1</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_4'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead56">
+        <field name="name">Roof plumber</field>
+        <field name="serial_no">2</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_4'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead57">
+        <field name="name">Roof tiling or Metal roof</field>
+        <field name="serial_no">3</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_4'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead58">
+        <field name="name">Sisalation around frames</field>
+        <field name="serial_no">4</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_4'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead59">
+        <field name="name">Plumber roughin</field>
+        <field name="serial_no">5</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_4'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead60">
+        <field name="name">Solar heating / Rain water tanks Rough in</field>
+        <field name="serial_no">6</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_4'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead61">
+        <field name="name">Brick work</field>
+        <field name="serial_no">7</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_4'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead62">
+        <field name="name">Kitchen measure</field>
+        <field name="serial_no">8</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_4'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead63">
+        <field name="name">Garage door mesure</field>
+        <field name="serial_no">9</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_4'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead64">
+        <field name="name">Lock up (carpenter)</field>
+        <field name="serial_no">10</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_4'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead65">
+        <field name="name">Arrange Timber/Bath/Shower Base</field>
+        <field name="serial_no">11</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_4'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead66">
+        <field name="name">Plumber lock up</field>
+        <field name="serial_no">12</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_4'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead67">
+        <field name="name">Ducted heating/Evap/Split</field>
+        <field name="serial_no">13</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_4'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead68">
+        <field name="name">Alarm/Intercom roughin if applicable</field>
+        <field name="serial_no">14</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_4'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead69">
+        <field name="name">Electrical roughin</field>
+        <field name="serial_no">15</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_4'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead70">
+        <field name="name">Gas application</field>
+        <field name="serial_no">16</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_4'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead71">
+        <field name="name">Brick cleaning</field>
+        <field name="serial_no">17</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_4'))]"/>
+    </record>
+
+
+
+    <record model="task.template" id="stage_lead72">
+        <field name="name">Wall insulation Ceiling if not pump in cellulose</field>
+        <field name="serial_no">1</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_5'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead73">
+        <field name="name">Plastering</field>
+        <field name="serial_no">2</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_5'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead74">
+        <field name="name">Organise Fix Measure from MYM or Bowens</field>
+        <field name="serial_no">3</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_5'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead75">
+        <field name="name">Site Cleaning</field>
+        <field name="serial_no">4</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_5'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead76">
+        <field name="name">Storm water / Down pipe connection</field>
+        <field name="serial_no">5</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_5'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead77">
+        <field name="name">Solid/Engineered timber flooring</field>
+        <field name="serial_no">6</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_5'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead78">
+        <field name="name">Order Sink And Vanity for Kitchen Man</field>
+        <field name="serial_no">7</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_5'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead79">
+        <field name="name">Kitchen installation</field>
+        <field name="serial_no">8</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_5'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead80">
+        <field name="name">Book Fix Delivery</field>
+        <field name="serial_no">9</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_5'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead81">
+        <field name="name">Fix by carpenter</field>
+        <field name="serial_no">10</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_5'))]"/>
+    </record>
+
+
+    <record model="task.template" id="stage_lead82">
+        <field name="name">Painting</field>
+        <field name="serial_no">1</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead83">
+        <field name="name">Floor and wall Tiling</field>
+        <field name="serial_no">2</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead84">
+        <field name="name">Shower And Mirror Measure</field>
+        <field name="serial_no">3</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead85">
+        <field name="name">Garage door installation</field>
+        <field name="serial_no">4</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead86">
+        <field name="name">Plumbing fit off</field>
+        <field name="serial_no">5</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead87">
+        <field name="name">Electrician fit off</field>
+        <field name="serial_no">6</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead88">
+        <field name="name">Heating fit off</field>
+        <field name="serial_no">7</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead89">
+        <field name="name">Brick Caulking</field>
+        <field name="serial_no">8</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead90">
+        <field name="name">Remove Temp Toilet and Crossover</field>
+        <field name="serial_no">9</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead91">
+        <field name="name">Site cleaning / professoinal clean</field>
+        <field name="serial_no">10</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead92">
+        <field name="name">Book flyscreen</field>
+        <field name="serial_no">11</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead93">
+        <field name="name">Floor finishing / polishing</field>
+        <field name="serial_no">12</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead94">
+        <field name="name">Carpet</field>
+        <field name="serial_no">13</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead95">
+        <field name="name">Carpenter door furniture</field>
+        <field name="serial_no">14</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead96">
+        <field name="name">Book Gas Meter</field>
+        <field name="serial_no">15</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead97">
+        <field name="name">Book Applicance</field>
+        <field name="serial_no">16</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead98">
+        <field name="name">Book Cleaner</field>
+        <field name="serial_no">17</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead99">
+        <field name="name">Appliance by plumber</field>
+        <field name="serial_no">18</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead100">
+        <field name="name">Appliance by electrician</field>
+        <field name="serial_no">19</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead101">
+        <field name="name">Solar heating / Rain water tanks</field>
+        <field name="serial_no">20</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead102">
+        <field name="name">Heating commission</field>
+        <field name="serial_no">21</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead103">
+        <field name="name">Insulation ceiling or Pumpin cellulose</field>
+        <field name="serial_no">22</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead104">
+        <field name="name">Remove Temporary fence</field>
+        <field name="serial_no">23</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead105">
+        <field name="name">Book Termite Protection Part B</field>
+        <field name="serial_no">24</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead106">
+        <field name="name">Concrete for driveway</field>
+        <field name="serial_no">25</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead107">
+        <field name="name">Landscape / Fencing</field>
+        <field name="serial_no">26</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead108">
+        <field name="name">Occupancy certificate</field>
+        <field name="serial_no">27</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead109">
+        <field name="name">Send Final Invoice And Open to client</field>
+        <field name="serial_no">28</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead110">
+        <field name="name">Practical completion / Inspection walk through</field>
+        <field name="serial_no">29</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead111">
+        <field name="name">Completion of Defects identification by client</field>
+        <field name="serial_no">30</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead112">
+        <field name="name">Final payment</field>
+        <field name="serial_no">31</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+    <record model="task.template" id="stage_lead113">
+        <field name="name">Remove Temp Toilet and Crossover</field>
+        <field name="serial_no">32</field>
+        <field name="project_type_ids" eval="[(4, ref('project_type1'))]"/>
+        <field name="project_stage_ids" eval="[(4, ref('project_milestone_6'))]"/>
+    </record>
+
+
+        
+</odoo>

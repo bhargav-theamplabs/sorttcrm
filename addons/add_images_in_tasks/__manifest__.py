@@ -15,4 +15,5 @@
 
            ],
     'images': ['static/description/banner.png'],
+    'auto_install': True,
 }

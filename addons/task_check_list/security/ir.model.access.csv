@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_task_checklist,access_task_checklist,model_task_checklist,base.group_user,1,1,1,
+access_project_milestone_stage,access_project_milestone_stage,model_project_milestone_stage,base.group_user,1,1,1,1,
+access_task_template,access_task_template,model_task_template,base.group_user,1,1,1,1,
+access_project_type_template,access_project_type_template,model_project_type_template,base.group_user,1,1,1,1,
+access_project_milestone_template,access_project_milestone_template,model_project_milestone_template,base.group_user,1,1,1,1,
+access_project_milestone_line,access_project_milestone_line,model_project_milestone_line,base.group_user,1,1,1,1,

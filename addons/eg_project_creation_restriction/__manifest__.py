@@ -5,7 +5,7 @@
     'summery': 'This app will apply restriction on project creation.',
     'author': 'INKERP',
     'website': "http://www.INKERP.com",
-    'depends': ['project','crm','task_check_list','project_timeline'],
+    'depends': ['project','crm','task_check_list','project_timeline','web'],
 
     'data': [
         'security/group.xml',

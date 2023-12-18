@@ -20,12 +20,6 @@ class ProjectTask(models.Model):
     checklist_progress = fields.Float(compute=checklist_progress, string='Progress', store=True,
                                       default=0.0)
     max_rate = fields.Integer(string='Maximum rate', default=100)
-    # milestone_stage_id = fields.Selection([
-    #     ('preliminary_stage', 'Preliminary Stage'),
-    #     ('base_stage', 'Base Stage'),('frame_stage','Frame Stage'),('lockup_stage','Lockup Stage'),('fixing_stage','Fixing Stage'),('completion_stage','Completion Stage')], string='Milestone')
-
-    # construction_milestone_id = fields.Many2one(
-    #     'project.milestone', 'Milestone', required=False)
 
 
 class TaskChecklist(models.Model):

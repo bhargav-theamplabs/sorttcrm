@@ -82,15 +82,18 @@
             name="view_mode"
         >tree,kanban,form,calendar,timeline,pivot,graph,activity</field>
     </record>
-    <record
-        id="project.action_view_task_overpassed_draft"
-        model="ir.actions.act_window"
-    >
+
+
+
+
+    <record id="project.action_view_task_overpassed_draft" model="ir.actions.act_window">
         <field name="view_mode">tree,form,calendar,timeline,graph,kanban</field>
     </record>
+    
     <record id="project.dblc_proj" model="ir.actions.act_window">
         <field name="view_mode">tree,form,calendar,timeline,graph,kanban</field>
     </record>
+    
     <record id="view_task_form2" model="ir.ui.view">
         <field name="name">project.task.form</field>
         <field name="model">project.task</field>

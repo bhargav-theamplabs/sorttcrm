@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Task Check List',
+    'name': 'Tasks Check List',
     'version': '1.0.0',
     'summary': """Checklist for Task Completion""",
     'description': """Evaluate task completion on the basis of checklists""",

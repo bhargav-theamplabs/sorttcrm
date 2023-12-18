@@ -48,27 +48,27 @@ class ProjectProject(models.Model):
             project_prefix = record.get('project_prefix', False)
             
             if not project_prefix:
-                sequence = self.env['ir.sequence'].search([('code', '=', 'project.project')])
+                sequence = self.env['ir.sequence'].sudo().search([('code', '=', 'project.project')])
                 if sequence:
                     sequence.prefix = 'PRJ/'
             else:
-                sequence = self.env['ir.sequence'].search([('code', '=', 'project.project')])
+                sequence = self.env['ir.sequence'].sudo().search([('code', '=', 'project.project')])
                 if sequence:
                     sequence.prefix = '%s/' % project_prefix
                 else:
-                    self.env['ir.sequence'].create({
+                    self.env['ir.sequence'].sudo().create({
                         'name': 'Project Project',
                         'implementation': 'standard',
                         'code': 'project.project',
                         'prefix': '%s/' % project_prefix
                     })
             
-            project_task_sequence = self.env['ir.sequence'].create({
+            project_task_sequence = self.env['ir.sequence'].sudo().create({
                 'name': 'Task %s' % (record['name']),
                 'implementation': 'standard'
             })
             record['task_sequence_id'] = project_task_sequence.id
-            record['project_sequence'] = self.env['ir.sequence'].next_by_code('project.project')
+            record['project_sequence'] = self.env['ir.sequence'].sudo().next_by_code('project.project')
             created_record = super(ProjectProject, self).create(record)
             created_records.append(created_record)
         
@@ -77,10 +77,10 @@ class ProjectProject(models.Model):
     def write(self, vals):
         """Overwrite the function to update the sequence """
         if vals.get('project_prefix'):
-            sequence = self.env['ir.sequence'].search([('code', '=',
+            sequence = self.env['ir.sequence'].sudo().search([('code', '=',
                                                         'project.project')])
             if sequence:
                 sequence.prefix = '%s/' % vals['project_prefix']
-                vals['project_sequence'] = self.env['ir.sequence'].next_by_code(
+                vals['project_sequence'] = self.env['ir.sequence'].sudo().next_by_code(
                     'project.project')
         return super(ProjectProject, self).write(vals)

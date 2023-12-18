@@ -19,7 +19,8 @@
 #    If not, see <http://www.gnu.org/licenses/>.
 #
 ################################################################################
-from odoo import models
+from odoo import models, fields, api
+from odoo.exceptions import ValidationError
 
 
 class InheritProjectTask(models.Model):
@@ -31,6 +32,20 @@ class InheritProjectTask(models.Model):
     respectively.
     """
     _inherit = 'project.task'
+
+    start_date = fields.Date("Start Date") 
+
+    @api.constrains('start_date', 'date_deadline')
+    def _check_start_date_before_deadline(self):
+        for record in self:
+            if record.start_date and record.date_deadline and record.start_date >= record.date_deadline:
+                raise ValidationError("Start Date must be before Deadline.")
+
+    @api.onchange('stage_id')
+    def on_change_is_closed(self):
+        if self.is_closed:
+            # Perform the action to archive the task
+            self.write({'active': False})
 
     def action_create_task_expense(self):
         """Expense Button which will go to Expense Wizard Form where he add

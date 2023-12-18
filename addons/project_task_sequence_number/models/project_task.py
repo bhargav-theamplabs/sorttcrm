@@ -40,7 +40,7 @@ class ProjectTask(models.Model):
             if not records['project_id']:
                 if records.get('task_sequence', 'New') == 'New':
                     records['task_sequence'] = self.env['ir.sequence']. \
-                                                   next_by_code(
+                                                   sudo().next_by_code(
                         'project.task') or 'New'
             else:
                 project = self.env['project.project'].browse(
@@ -49,14 +49,14 @@ class ProjectTask(models.Model):
                     records['task_sequence'] = '%s/%s/%s' % \
                                                   (project.project_sequence,
                                                    project.task_sequence_id.prefix,
-                                                   self.env['ir.sequence'].
+                                                   self.env['ir.sequence'].sudo().
                                                    next_by_code(
                                                        'project.task') or
                                                    'New')
                 else:
                     records['task_sequence'] = '%s/%s' % \
                                                   (project.project_sequence,
-                                                   self.env['ir.sequence'].
+                                                   self.env['ir.sequence'].sudo().
                                                    next_by_code(
                                                        'project.task') or
                                                    'New')
@@ -70,11 +70,11 @@ class ProjectTask(models.Model):
                 vals['task_sequence'] = '%s/%s/%s' % \
                                         (project.project_sequence,
                                          project.task_sequence_id.prefix,
-                                         self.env['ir.sequence'].next_by_code(
+                                         self.env['ir.sequence'].sudo().next_by_code(
                                              'project.task') or 'New')
             else:
                 vals['task_sequence'] = '%s/%s' % (project.project_sequence,
-                                                   self.env['ir.sequence'].
+                                                   self.env['ir.sequence'].sudo().
                                                    next_by_code('project.task')
                                                    or 'New')
         return super(ProjectTask, self).write(vals)

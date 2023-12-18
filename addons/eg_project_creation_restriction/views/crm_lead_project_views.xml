@@ -131,5 +131,48 @@
             </xpath>
         </field>
     </record>
+    <record id="project.view_task_all_calendar" model="ir.ui.view">
+            <field name="name">project.task.all.calendar</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_calendar"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <xpath expr="//calendar" position="attributes">
+                    <attribute name="color">project_color</attribute>
+                </xpath>
+                <xpath expr="//field[@name='project_id']" position="attributes">
+                    <attribute name="filters">1</attribute>
+                    <attribute name="color">color</attribute>
+                </xpath>
+            </field>
+        </record>
 
+        <record id="action_view_all_task1" model="ir.actions.act_window">
+            <field name="name">Task Calender</field>
+            <field name="res_model">project.task</field>
+            <field name="view_mode">calendar</field>
+            <field name="context">{'search_default_my_tasks': 1, 'search_default_open_tasks': 1, 'all_task': 0, 'default_user_ids': [(4, uid)]}</field>
+            <field name="search_view_id" ref="project.view_task_search_form_extended"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No tasks found. Let's create one!
+                </p>
+                <p>
+                    Organize your tasks by dispatching them across the pipeline.<br/>
+                    Collaborate efficiently by chatting in real-time or via email.
+                </p>
+            </field>
+        </record>
+        <!-- <record id="project.open_view_all_task_list_calendar" model="ir.actions.act_window.view">
+            <field name="sequence" eval="5"/>
+            <field name="view_mode">calendar</field>
+            <field name="act_window_id" ref="project.action_view_all_task"/>
+            <field name="view_id" ref="project.view_task_all_calendar"/>
+        </record> -->
+
+        <menuitem id="menu_milestone" 
+              name="Task Calender"
+              action='action_view_all_task1'
+              parent="project.menu_main_pm"
+              sequence="20"/>
 </odoo>

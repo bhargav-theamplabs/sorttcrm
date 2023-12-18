@@ -50,9 +50,8 @@ class CRMLeadDocument(models.Model):
 
     def unlink(self):
         for record in self:
-            record.create_chatter_log(f'Document removed: {record.name}')
+            record.create_chatter_log(f'Document removed: {record.doc_name}')
         return super(CRMLeadDocument, self).unlink()
-
 
 
 class Lead(models.Model):
@@ -108,6 +107,21 @@ class Lead(models.Model):
             if not rec.project_id:
                 rec.create_project_on_won()
         return res
+
+
+    def action_attach_document(self):
+        pass
+
+        # project_documents = self.mapped('project_id.ir.attachment')
+
+        # # Display the documents using a custom action (you need to create the action in XML)
+        # action = self.env.ref('your_module_name.action_show_project_documents').read()[0]
+        # action['domain'] = [('id', 'in', project_documents.ids)]
+        # return action
+
+        # Assuming you have a document_id
+        # document_id = 1  # Replace with the actual document ID
+        # self.write({'document_ids': [(4, document_id)]})
 
 
 class ProjectType(models.Model):
